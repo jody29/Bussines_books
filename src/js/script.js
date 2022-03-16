@@ -1,3 +1,10 @@
-import getData from "./modules/getData.js";
+import validateForm from "./modules/form.js";
 
-getData()
+const Input = document.querySelectorAll('input[name="topic"]')
+
+Input.forEach(item => {
+    item.addEventListener('click', (event) => {
+        validateForm(event.target.value)
+    })
+})
+
