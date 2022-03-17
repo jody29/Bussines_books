@@ -1,9 +1,10 @@
 import render from "./render.js";
 import { loading } from "../utils/states.js";
 
-const getData = (value) => {
+const getData = (value, topic) => {
+    const breadcrumbs = document.querySelector('main ul:first-of-type')
     const form = document.querySelector('form')
-    const display = document.querySelector('main ul')
+    const display = document.querySelector('.results')
     const cors = "https://cors-anywhere.herokuapp.com/"
     const endpoint = "https://zoeken.oba.nl/api/v1/search/?q="
     const query = value
@@ -19,6 +20,11 @@ const getData = (value) => {
 
     form.innerHTML = '' // hide the form when subject is selected
     display.innerHTML = loading // set loader in the DOM
+    breadcrumbs.innerHTML = `
+    <li><a href='/'>home</a></li>
+    <li><a class='back'>${topic}</a></li>
+    <li><a>${query}</a></li>
+    `
 
     fetch(url, config) // fetch the OBA api using the url
         .then(response => {

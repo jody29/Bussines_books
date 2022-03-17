@@ -1,11 +1,11 @@
 import getData from "./getData.js"
 
-const checkSecond = () => {
+const checkSecond = (topic) => {
     const second = document.querySelectorAll('input[name="subTopic"]')
 
     second.forEach(element => {
         element.addEventListener('click', (event) => {
-            getData(event.target.value)
+            getData(event.target.value, topic)
         })
     })
 }

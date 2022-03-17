@@ -2,7 +2,7 @@ import { concept, design, planning, management } from "../utils/input.js"
 import checkSecond from "./checkSecond.js"
 
 const validateForm = (value) => {
-
+    const breadcrumbs = document.querySelector('main ul:first-of-type')
     const form = document.querySelector('form')
     const fieldset = form.querySelector('fieldset')
     const legend = fieldset.querySelector('legend')
@@ -10,6 +10,7 @@ const validateForm = (value) => {
     const article = document.querySelector('main article:first-child')
 
     article.style = 'display: none;'
+    breadcrumbs.style = 'display: flex'
 
     first.forEach(item => {
         item.classList.add('hidden')
@@ -30,9 +31,14 @@ const validateForm = (value) => {
             break;
     }
 
+    breadcrumbs.insertAdjacentHTML('beforeend', `
+            <li><a href='/'>home</a></li>
+            <li><a>${value}</a></li>
+            `)
+
     legend.innerHTML = `Wat wil je weten over ${value}?`
 
-    checkSecond() 
+    checkSecond(value) 
 }
 
 export default validateForm
