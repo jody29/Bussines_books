@@ -14,13 +14,13 @@ const concept = `
 
 // inputs for when user clicks on design
 const design = `
-<input type='radio' name='subTopic' id='prototype' value='prototype'></input>
-<input type='radio' name='subTopic' id='design' value='design'></input>
-<input type='radio' name='subTopic' id='test' value='test'></input>
+<input type='radio' name='subTopic' id='prototype' value='prototyping'></input>
+<input type='radio' name='subTopic' id='design' value='huisstijl'></input>
+<input type='radio' name='subTopic' id='test' value='usability testing'></input>
 
-<label for='prototype'>prototype</label>
-<label for='design'>design</label>
-<label for='test'>test</label>
+<label for='prototype'>prototyping</label>
+<label for='design'>huisstijl</label>
+<label for='test'>usability testing</label>
 `
 
 // inputs for when user clicks on planning

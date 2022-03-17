@@ -7,6 +7,9 @@ const validateForm = (value) => {
     const fieldset = form.querySelector('fieldset')
     const legend = fieldset.querySelector('legend')
     const first = fieldset.querySelectorAll('label')
+    const article = document.querySelector('main article:first-child')
+
+    article.style = 'display: none;'
 
     first.forEach(item => {
         item.classList.add('hidden')

@@ -17,7 +17,7 @@ const getData = (value) => {
         Authorization: `Bearer ${secret}`
     }
 
-    form.innerHTML = ''
+    form.innerHTML = '' // hide the form when subject is selected
     display.innerHTML = loading // set loader in the DOM
 
     fetch(url, config) // fetch the OBA api using the url
@@ -26,7 +26,11 @@ const getData = (value) => {
             return response.json() // return the response as a json file
         })
         .then(data => {
-            render(data, query) // initializing the render function with the data and the query as arguments
+            fetch(onderwijsUrl, config)
+            .then(result => result.json())
+            .then(output => {
+                render(data, output, query) // initializing the render function with the data and the query as arguments
+            })
         })
         .catch(err => console.log(err))
 }
