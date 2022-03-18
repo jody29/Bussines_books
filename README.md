@@ -10,8 +10,8 @@ Bussines books is an application that gives starting entrepeneurs information ab
 * [concept](https://github.com/jody29/Bussines_books#-concept)
 * [features](https://github.com/jody29/Bussines_books#-features)
 * [installation](https://github.com/jody29/Bussines_books#-installation)
-* [todo list]()
-* [license]()
+* [todo list](https://github.com/jody29/Bussines_books#-todo-list)
+* [license](https://github.com/jody29/Bussines_books#license)
 
 ## 💡 Concept
 Create an application for the OBA (public library of Amsterdam) using the OBA API that solves a chosen user story.
