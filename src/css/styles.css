@@ -11,7 +11,7 @@ header {
     border-top: 7px solid #fe0000;
     margin: 0;
     padding: 1em 4em;
-    background-image: url('./assets/header2.png');
+    background-image: url(../../assets/header2.png);
     background-size: cover;
     height: 15em;
 }
