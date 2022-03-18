@@ -1,5 +1,5 @@
 import render from "./render.js";
-import { loading } from "../utils/states.js";
+import { error429, error403, loading } from "../utils/states.js";
 
 const getData = (value, topic) => {
     const breadcrumbs = document.querySelector('main ul:first-of-type')
@@ -26,9 +26,14 @@ const getData = (value, topic) => {
     <li><a>${query}</a></li>
     `
 
+    const back = document.querySelector('.back')
+
+    back.addEventListener('click', () => { location.reload() })
+
     fetch(url, config) // fetch the OBA api using the url
         .then(response => {
-            response.status == 429 ? console.log('Te veel gebruikers') : console.log('ja') // if there are too many requests, log this
+            response.status == 429 ? display.innerHTML = error429 : '' // if there are too many requests, log this
+            response.status == 403 ? display.innerHTML = error403 : ''
             return response.json() // return the response as a json file
         })
         .then(data => {
