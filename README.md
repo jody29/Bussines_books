@@ -7,7 +7,7 @@ Bussines books is an application that gives starting entrepeneurs information ab
 [Live demo link](https://jody29.github.io/project-1-2021/)
 
 ## Table of contents
-* [concept]()
+* [concept](https://github.com/jody29/Bussines_books#-concept)
 * [features]()
 * [installation]()
 * [todo list]()
