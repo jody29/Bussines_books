@@ -6,6 +6,7 @@ const render = (data, output, query) => {
     const articles = output.results
     const results = books.length + articles.length
     const loader = document.querySelectorAll('.loading') // select loaderr
+    const back = document.querySelectorAll('.back')
 
     display.insertAdjacentHTML('beforebegin', `<p>${results} resultaten voor: <strong>${query}</strong></p>`) // show how many results
 
@@ -15,6 +16,10 @@ const render = (data, output, query) => {
 
     renderBooks(books, display)
     renderArticles(articles, display)
+
+    back.forEach(button => {
+        button.addEventListener('click', () => { location.reload() })
+    })
 }
 
 export default render

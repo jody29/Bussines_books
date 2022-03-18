@@ -8,6 +8,7 @@ const validateForm = (value) => {
     const legend = fieldset.querySelector('legend')
     const first = fieldset.querySelectorAll('label')
     const article = document.querySelector('main article:first-child')
+    const back = document.querySelectorAll('.back')
 
     article.style = 'display: none;'
     breadcrumbs.style = 'display: flex'
@@ -38,7 +39,11 @@ const validateForm = (value) => {
 
     legend.innerHTML = `Wat wil je weten over ${value}?`
 
-    checkSecond(value) 
+    checkSecond(value)
+
+    back.forEach(button => {
+        button.addEventListener('click', () => { window.history.back() })
+    })
 }
 
 export default validateForm

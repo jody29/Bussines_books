@@ -10,8 +10,8 @@ const loading = `
 `
 
 const partial = `
-<li><a href="">home</a></li>
-<li> <a href="">concept</a></li>
+<li><a class='back'>home</a></li>
+<li><a>concept</a></li>
 `
 
 export {

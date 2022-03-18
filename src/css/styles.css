@@ -11,7 +11,7 @@ header {
     border-top: 7px solid #fe0000;
     margin: 0;
     padding: 1em 4em;
-    background-image: url('/assets/header2.jpeg');
+    background-image: url('./assets/header2.jpeg');
     background-size: cover;
     height: 15em;
 }
@@ -213,6 +213,10 @@ main article h2 {
 
 footer {
     padding: 0 4em;
+}
+
+.back {
+    cursor: pointer;
 }
 
 

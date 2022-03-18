@@ -12,7 +12,7 @@ const getData = (value, topic) => {
     const secret = "4289fec4e962a33118340c888699438d"
     const detail = "Default"
     const url = `${cors}${endpoint}${query}&authorization=${pubKey}&detaillevel=${detail}&output=json`
-    const onderwijsUrl = `http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=${query}+NOT+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=${pubKey}&output=json`
+    const onderwijsUrl = `${cors}http://obaliquid.staging.aquabrowser.nl/onderwijs/api/v1/search/?q=${query}+NOT+lom.lifecycle.contribute.publisher%3Dwikipedia&authorization=${pubKey}&output=json`
     
     const config = {
         Authorization: `Bearer ${secret}`
@@ -21,8 +21,8 @@ const getData = (value, topic) => {
     form.innerHTML = '' // hide the form when subject is selected
     display.innerHTML = loading // set loader in the DOM
     breadcrumbs.innerHTML = `
-    <li><a href='/'>home</a></li>
-    <li><a class='back'>${topic}</a></li>
+    <li><a class='back'>home</a></li>
+    <li><a>${topic}</a></li>
     <li><a>${query}</a></li>
     `
 
