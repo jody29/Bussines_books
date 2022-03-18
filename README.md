@@ -8,8 +8,8 @@ Bussines books is an application that gives starting entrepeneurs information ab
 
 ## Table of contents
 * [concept](https://github.com/jody29/Bussines_books#-concept)
-* [features]()
-* [installation]()
+* [features](https://github.com/jody29/Bussines_books#-features)
+* [installation](https://github.com/jody29/Bussines_books#-installation)
 * [todo list]()
 * [license]()
 
